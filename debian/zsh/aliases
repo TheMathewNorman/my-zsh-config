@@ -1,1 +1,5 @@
 alias c="clear"
+alias tinker="php artisan tinker"
+alias freshandseed="php artisan migrate:fresh --seed"
+alias fresh="php artisan migrate:fresh"
+alias seedtestdata="php artisan db:seed --class=TestDataSeeder"
