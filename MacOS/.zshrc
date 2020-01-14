@@ -100,33 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases File
-. ~/.zsh_aliases
+. ~/zsh/aliases
 
 # Functions File
-. ~/.zsh_functions
-
-zshupdate() {
-  if [ -z ${var+x} ]
-  then
-    echo "Please specify either 'aliases', 'functions' or 'all'"
-  else
-    if [ $1 = "aliases" ]
-    then
-      cp ~/zsh_aliases.sh ~/.zsh_aliases
-      echo "Updated aliases with ~/zsh_alises.sh"
-    elif [ $1 = "functions" ]
-    then
-      cp ~/zsh_functions.sh ~/.zsh_functions
-      echo "Updated functions with ~/zsh_functions.sh"
-    elif [ $1 = "all" ]
-    then
-      cp ~/zsh_aliases.sh ~/.zsh_aliases
-      echo "Updated aliases with ~/zsh_aliases.sh"
-      cp ~/zsh_functions.sh ~/zsh_functions
-      echo "Updated functions with ~/zsh_functions.sh"
-    fi
-  fi
-}
+. ~/zsh/functions
 
 # Hide user@device from agnoster
 prompt_context(){}
