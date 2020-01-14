@@ -1,0 +1,19 @@
+proj() {
+    if [ -d "/Applications/XAMPP/xamppfiles/htdocs/$1" ]
+    then
+        cd "/Applications/XAMPP/xamppfiles/htdocs/$1"
+    else
+        echo "The $1 project does not exist."
+    fi
+}
+
+startday() {
+    open -a PhpStorm.app
+    open -a TablePlus.app
+    open -a Firefox.app
+    open -a Slack.app
+    open -a Trello.app
+    open -a "Microsoft Outlook.app"
+    sudo /Applications/XAMPP/xamppfiles/ctlscript.sh start apache
+    sudo /Applications/XAMPP/xamppfiles/ctlscript.sh start sql
+}
